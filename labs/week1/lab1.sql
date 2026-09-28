@@ -1,4 +1,5 @@
 create database taxation;
+/*---use database--*/
 use taxation;
 create table taxpayer(
 taxprayer_id int primary key not null,
@@ -11,6 +12,9 @@ email varchar(100) unique,
 is_active boolean
 );
 show tables; 
+alter table taxpayer
+rename column taxprayer_id to taxpayer_id;
+
 select * from taxpayer;
 insert into taxpayer values(101,"ABCDE1234F","Ravi kumar",'1995-06-15',"software engineer",850000.00,"ravi.kumar@example.com",TRUE);
 insert into taxpayer values(102,"BCDEF2345G","priya sharma",'1992-11-22',"doctor",120000.00,"priyasharma@example.com",TRUE);
